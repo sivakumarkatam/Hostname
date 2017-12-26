@@ -20,17 +20,17 @@
   "vpc_id": "{{user `aws-vpc_id`}}",
   "subnet_id": "{{user `aws-subnet_id`}}",
   "ssh_username": "centos",
-  "ami_name": "APG-API{{timestamp}}",
+  "ami_name": "host-API{{timestamp}}",
   "launch_block_device_mappings": [
     {
       "device_name": "/dev/sda1",
-      "volume_size": 100,
+      "volume_size": 10,
       "volume_type": "gp2",
       "delete_on_termination": true
     }
   ],
   "tags": {
-  "Name": "APG-API",
+  "Name": "host-API",
   "Application": "DevOps"
 }
 }],
