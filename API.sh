@@ -9,9 +9,9 @@ sudo yum -y install wget rpm epel-release awscli ruby python
 
 # sudo yum -y localinstall jre-8u131-linux-x64.rpm
 #preserve host name
-#echo "preserve_hostname: true" >> /etc/cloud/cloud.cfg
+echo "preserve_hostname: false" >> /etc/cloud/cloud.cfg
 
-echo "manage_etc_hosts: true" >> /etc/cloud/cloud.cfg
+#echo "manage_etc_hosts: true" >> /etc/cloud/cloud.cfg
 
 # sudo rm -rf jre-8u131-linux-x64.rpm
 sudo wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jre-8u151-linux-x64.tar.gz"
@@ -135,3 +135,4 @@ ft_dir=/var/log
 ft_filter=secure
 ft_delim=<newline>
 ft_start_top=1' > /opt/McAfee/siem/mcafee_siem_collector.conf 
+sudo rm -rf /var/tmp/aws-mon/instance-id
