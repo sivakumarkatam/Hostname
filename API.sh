@@ -11,6 +11,8 @@ sudo yum -y install wget rpm epel-release awscli ruby python
 #preserve host name
 #echo "preserve_hostname: true" >> /etc/cloud/cloud.cfg
 
+echo "manage_etc_hosts: true" >> /etc/cloud/cloud.cfg
+
 # sudo rm -rf jre-8u131-linux-x64.rpm
 sudo wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jre-8u151-linux-x64.tar.gz"
 sudo tar -zxvf jre-8u*-linux-*.tar.gz
